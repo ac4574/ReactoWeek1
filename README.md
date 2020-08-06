@@ -17,7 +17,8 @@ arrayThreeSum([-5, -3, 1, 2, 6, 12, 15], 10)  //should return [[ -3, 1, 12 ]]
 
 ### Hints
 
-If they go for an optimized solution...
+If they go for an optimized solution and are stuck...
+- Suggest to the interviewee to consider how we optimized Pair Sum yesterday considering we have a sorted input array.
 - Suggest to the interviewee to think of how they would handle optimizing this problem if they only had to sum two integers.  A three sum can be thought of as trying to find if two integers sum to target valued added to each integer in the input array.
 
 For example:
