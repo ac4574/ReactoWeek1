@@ -34,6 +34,27 @@ arrayTwoSum([11,-1], -10 + 0)
 
 ## Solutions
 
+**Naive Solution**: O(n^3) time complexity (yikes!), O(n) space complexity
+```javascript
+function arrayThreeSum(array, target) {
+  const solution = []
+
+  for (let i = 0; i < array.length - 2 ; i++) {
+    let first = array[i]
+    for (let j = i+1; j < array.length - 1 ; j++) {
+      let second = array[j]
+      for (let k = j+1; k < array.length ; k++) {
+        let third = array[k]
+        if (first + second + third === target) {
+          solution.push([first, second, third])
+        }
+     }
+    }
+  }
+  return solution
+}
+```
+
 **Optimized Solution 1**: O(n^2) time complexity, O(n) space complexity
 ```javascript
 function arrayThreeSum(arr, targetSum){
