@@ -1,21 +1,20 @@
 # Array Three Sum
 ## Interviewer Prompt
-Given an array of distinct integers and an integer representing a target sum, write a function that returns an array of all triplets in the input array that sum to the target sum.
+Given a sorted array of distinct integers and an integer representing a target sum, write a function that returns an array of all triplets in the input array that sum to the target sum.
 
 
 ### Examples
 
 ```javascript
-arrayThreeSum([12, 3, 1, 2, -6, 5, -8, 6], 0)   //should return [[-8, 2, 6], [-8, 3, 5], [-6, 1, 5]]
-arrayThreeSum([5, 6 , 1, -9 , 7, 3 , 2], 35)    //should return []
-arrayThreeSum([1, 15, -5, 12 , -3, 6 , 2], 10)  //should return [[ -3, 1, 12 ]]
+arrayThreeSum([-8, -6, 1, 2, 3, 5, 6, 12], 0)   //should return [[-8, 2, 6], [-8, 3, 5], [-6, 1, 5]]
+arrayThreeSum([-9, 1, 2, 3, 5, 6, 7], 35)    //should return []
+arrayThreeSum([-5, -3, 1, 2, 6, 12, 15], 10)  //should return [[ -3, 1, 12 ]]
 ```
 
 ## Interviewer Strategy Guide
 Let's think about time complexity.  If your interviewee tries to go down the path of trying all possible combintations of three integers, that will have a time complexity of O(n^3).  Try to encourage them to find a more optimal approach.
 
 ### Hints
-- The input array is NOT sorted, we still can sort the input array and then use that sorted array to help us optimize the solution.
 - Suggest to the interviewee to think of how they would handle optimizing this problem if they only had to sum two integers.  A three sum can be thought of as trying to find if two integers sum to target valued added to each integer in the input array.
 
 For example:
@@ -38,9 +37,6 @@ arrayTwoSum([11,-1], -10 + 0)
 **Optimized Solution 1**: O(n^2) time complexity, O(n) space complexity
 ```javascript
 function arrayThreeSum(arr, targetSum){
-
-  //sorts the input arr from least to greatest
-  arr.sort((a, b) => a-b)
 
   const solution = []
 
