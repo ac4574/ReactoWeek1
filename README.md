@@ -12,14 +12,17 @@ arrayThreeSum([-5, -3, 1, 2, 6, 12, 15], 10)  //should return [[ -3, 1, 12 ]]
 ```
 
 ## Interviewer Strategy Guide
-Let's think about time complexity.  If your interviewee tries to go down the path of trying all possible combintations of three integers, that will have a time complexity of O(n^3).  Try to encourage them to find a more optimal approach.
+- The interviewee may go for a triple for loop solution -- if they have not mentioned it, it may be worth making them aware that they are going for a runtime of O(n^3). This runtime is not good, but optimization can always come after!
+
 
 ### Hints
+
+If they go for an optimized solution...
 - Suggest to the interviewee to think of how they would handle optimizing this problem if they only had to sum two integers.  A three sum can be thought of as trying to find if two integers sum to target valued added to each integer in the input array.
 
 For example:
 ```javascript
-arrayThreeSum([11, -1, -10], 0) 
+arrayThreeSum([-10, -1, 11], 0) 
 //can be broken down to the below:
 
 //checking if 11 is going to be one of the integers: 11 + ? + ? = 0
@@ -87,7 +90,7 @@ function arrayThreeSum(arr, targetSum){
 ```
 
 
-**Optimized Solution 2**: O(n^2) time complexity, O(n) space complexity
+**Optimized Solution 2 (What if the array isn't sorted?)**: O(n^2) time complexity, O(n) space complexity
 - Note that this solution does not return a sorted solution like Solution 1
 
 ```javascript
