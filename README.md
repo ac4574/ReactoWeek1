@@ -54,7 +54,7 @@ function arrayThreeSum(array, target) {
         if (first + second + third === target) {
           solution.push([first, second, third])
         }
-     }
+      }
     }
   }
   return solution
